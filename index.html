@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng nigga</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        h1 { text-align: center; }
+        .product { border: 1px solid #ccc; padding: 10px; margin: 10px; text-align: center; display: inline-block; width: 200px; }
+        .product img { max-width: 100%; }
+        .btn { background-color: #28a745; color: white; padding: 10px; border: none; cursor: pointer; }
+        .popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background: white; border: 1px solid #ccc; z-index: 1001; }
+        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1000; }
+        .popup a { color: blue; text-decoration: underline; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Cửa Hàng Của Nguyễn Hoàng</h1>
+
+    <div class="product">
+        <h2>Ông bố đơn thân (anh ba)</h2>
+        <img src="https://s3.ap-southeast-1.amazonaws.com/cdn.vntre.vn/default/an-ba-to-com-1725471597.jpg" alt="Sản phẩm 1">
+        <p>Giá: 100,000 VNĐ</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+    <div class="product">
+        <h2>Phan Hoàng Luân</h2>
+        <img src="link_to_image2" alt="Sản phẩm 2">
+        <p>Giá: 200,000 VNĐ</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+    <div class="product">
+        <h2>Nguyễn Kiều Ly</h2>
+        <img src="https://scontent.fhan4-6.fna.fbcdn.net/v/t1.15752-9/460192883_1298898801072053_2551562403254044281_n.jpg?_nc_cat=109&amp;ccb=1-7&amp;_nc_sid=9f807c&amp;_nc_eui2=AeFEcOq925cj8nqGArs6ykaqSMUwI_rwJZtIxTAj-vAlm2GQx0YCnu8i8LZ7z_1a1yTr19dS4QtlVyXTOGtIz3Az&amp;_nc_ohc=BXwOd250R8UQ7kNvgGXvbN-&amp;_nc_ht=scontent.fhan4-6.fna&amp;oh=03_Q7cD1QF8yXO3jxHhkFMKlNXu_8cButOTMY7u_0Z12qahhkk_vg&amp;oe=67189D8F" alt="Sản phẩm 3">
+        <p>Giá: 150,0000 VNĐ</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+    <div class="product">
+        <h2>Đức Vũ</h2>
+        <img src="https://scontent.fhan4-5.fna.fbcdn.net/v/t1.15752-9/460463057_546804577791332_5203985664354363570_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=9f807c&amp;_nc_eui2=AeHi6PiGOBCU_cMM1n81GCQA_hPzLscEnPn-E_MuxwSc-ZTX9ArUTO1cR1KysiWlSqOu-JKeYQJ4acUJAY1JC_jo&amp;_nc_ohc=ey4BJ5ITko0Q7kNvgGNy_-z&amp;_nc_ht=scontent.fhan4-5.fna&amp;oh=03_Q7cD1QFQv1H0bgGxOuCNrcmaqYNhRLkDJg8jgizw66Mkcgjnfg&amp;oe=6718BA18" alt="Sản phẩm 4">
+        <p>Giá: 120,000 VNĐ</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+    <div class="product">
+        <h2>Thanh Tài</h2>
+        <img src="link_to_image5" alt="Sản phẩm 5">
+        <p>Giá: 180,000 VNĐ</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+    <div class="product">
+        <h2>Đức Anh</h2>
+        <img src="link_to_image6" alt="Sản phẩm 6">
+        <p>Giá: 220,000 VNĐ</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+    <div class="product">  
+        <h2>Trương Minh Quân</h2>
+        <img src="link_to_image7" alt="Sản phẩm 7">
+        <p>Giá: 130,000 VNĐ</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+    <div class="product">
+        <h2>Tinh trùng mọi đen</h2>
+        <img src="link_to_image8" alt="Sản phẩm 8">
+        <p>Giá: 23,000,000 VNĐ</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+    <div class="product">
+        <h2>Hân Nguyễn</h2>
+        <img src="link_to_image9" alt="Sản phẩm 9">
+        <p>Giá: 1 tỉ (không trả góp)</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+    <div class="product">
+        <h2>Hoàng Nguyễn</h2>
+        <img src="link_to_image10" alt="Sản phẩm 10">
+        <p>Giá: vô giá</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+    <div class="product">
+        <h2>Nam Lê(trai sóc lọ)</h2>
+        <img src="https://scontent.fhan3-4.fna.fbcdn.net/v/t1.15752-9/459844290_523840726859504_3251222986385152557_n.jpg?_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=9f807c&amp;_nc_eui2=AeG-_vZA43i9qkT1EYOpCNIjEHErGFwfJXkQcSsYXB8leU4hqtdSBnc8cFL7ZMYlefBArfzXtBZPh1VAXmpP6Xxs&amp;_nc_ohc=kpF_lfel8AIQ7kNvgGywzSL&amp;_nc_ht=scontent.fhan3-4.fna&amp;oh=03_Q7cD1QGTmFqe3wasQ_RjGUZPF7D504INtS2o9l7TvxuHYg59jA&amp;oe=6718B098" alt="Sản phẩm 10">
+        <p>Giá: 10 VNĐ</p>
+        <button class="btn" onclick="showPopup()">Mua Ngay</button>
+    </div>
+
+    <div class="popup" id="popup">
+        <p>Bạn đéo đủ tiền! <a href="https://facebook.com/bomaytenhoang" target="_blank">Liên hệ với chúng tôi</a></p>
+        <q>Bạn nghèo vờ cờ lờ</q>
+        <button onclick="closePopup()">Đóng</button>
+    </div>
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
